@@ -1,8 +1,8 @@
 from django.db.models import Q
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 import random
 from django.views import View
-from django.views.generic import ListView, TemplateView
+from django.views.generic import ListView, TemplateView, DetailView
 from .models import RestaurantLocation
 
 
@@ -32,4 +32,12 @@ class RestaurantListView(ListView):
         else:
             queryset = RestaurantLocation.objects.all()
         return queryset
+
+class RestaurantDetailView(DetailView):
+    queryset =  RestaurantLocation.objects.all()
+
+    def get_object(self, *args, **kwargs):
+        rest_id = self.kwargs.get("rest_id")
+        obj = get_object_or_404(RestaurantLocation, id=rest_id)
+        return obj
 
