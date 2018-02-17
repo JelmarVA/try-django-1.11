@@ -1,3 +1,4 @@
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.db.models import Q
 from django.shortcuts import render, get_object_or_404
 import random
@@ -38,10 +39,10 @@ class RestaurantDetailView(DetailView):
     queryset =  RestaurantLocation.objects.all()
 
 
-class RestaurantCreatView(CreateView):
+class RestaurantCreatView(LoginRequiredMixin, CreateView):
     form_class = RestaurantLocationCreateForm
     template_name = 'restaurants/form.html'
-    success_url = "/restaurants/"
+    #success_url = "/restaurants/"
 
     def form_valid(self, form):
         instance = form.save(commit=False)
