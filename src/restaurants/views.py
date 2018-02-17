@@ -5,7 +5,7 @@ from django.http import HttpResponseRedirect
 from django.views import View
 from django.views.generic import ListView, TemplateView, DetailView, CreateView
 from .models import RestaurantLocation
-from .forms import RestaurantCreateForm, RestaurantLocationCreateForm
+from .forms import RestaurantLocationCreateForm
 
 # Create your views here.
 # function based view
@@ -42,3 +42,8 @@ class RestaurantCreatView(CreateView):
     form_class = RestaurantLocationCreateForm
     template_name = 'restaurants/form.html'
     success_url = "/restaurants/"
+
+    def form_valid(self, form):
+        instance = form.save(commit=False)
+        instance.owner = self.request.user
+        return super(RestaurantCreatView, self).form_valid(form)

@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6bfc60a7-91f2-4b54-8b33-b9c9fbeb95d2" name="Default" comment="added django forms (not the right way yet)">
+    <list default="true" id="6bfc60a7-91f2-4b54-8b33-b9c9fbeb95d2" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/restaurants/validators.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/db.sqlite3" afterPath="$PROJECT_DIR$/src/db.sqlite3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/muypicky/urls.py" afterPath="$PROJECT_DIR$/src/muypicky/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/restaurants/forms.py" afterPath="$PROJECT_DIR$/src/restaurants/forms.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/restaurants/models.py" afterPath="$PROJECT_DIR$/src/restaurants/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/restaurants/templates/restaurants/form.html" afterPath="$PROJECT_DIR$/src/restaurants/templates/restaurants/form.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/restaurants/views.py" afterPath="$PROJECT_DIR$/src/restaurants/views.py" />
     </list>
@@ -29,11 +30,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/restaurants/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="767">
-              <caret line="43" column="33" lean-forward="true" selection-start-line="43" selection-start-column="33" selection-end-line="43" selection-end-column="33" />
+            <state relative-caret-position="677">
+              <caret line="43" column="29" lean-forward="false" selection-start-line="43" selection-start-column="29" selection-end-line="43" selection-end-column="29" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
               </folding>
@@ -45,20 +46,30 @@
         <entry file="file://$PROJECT_DIR$/src/restaurants/templates/restaurants/form.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="108">
-              <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="forms.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/restaurants/forms.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="1" column="38" lean-forward="false" selection-start-line="1" selection-start-column="38" selection-end-line="1" selection-end-column="38" />
+            <state relative-caret-position="54">
+              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="validators.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/restaurants/validators.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="15" column="61" lean-forward="false" selection-start-line="15" selection-start-column="61" selection-end-line="15" selection-end-column="61" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -83,21 +94,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/templates/base.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" column="77" lean-forward="false" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="77" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/restaurants/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" column="77" lean-forward="false" selection-start-line="6" selection-start-column="3" selection-end-line="8" selection-end-column="77" />
+            <state relative-caret-position="180">
+              <caret line="10" column="20" lean-forward="false" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -121,7 +122,7 @@
         <entry file="file://$PROJECT_DIR$/src/muypicky/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="558">
-              <caret line="31" column="60" lean-forward="false" selection-start-line="31" selection-start-column="60" selection-end-line="31" selection-end-column="60" />
+              <caret line="31" column="61" lean-forward="false" selection-start-line="31" selection-start-column="61" selection-end-line="31" selection-end-column="61" />
               <folding>
                 <element signature="e#642#674#0" expanded="true" />
               </folding>
@@ -166,13 +167,14 @@
         <option value="$PROJECT_DIR$/src/muypicky/settings/base.py" />
         <option value="$PROJECT_DIR$/src/restaurants/admin.py" />
         <option value="$PROJECT_DIR$/src/restaurants/templates/restaurants/restaurantlocation_detail.html" />
-        <option value="$PROJECT_DIR$/src/restaurants/models.py" />
         <option value="$PROJECT_DIR$/src/restaurants/templates/restaurants/restaurants_list.html" />
         <option value="$PROJECT_DIR$/src/restaurants/utils.py" />
-        <option value="$PROJECT_DIR$/src/muypicky/urls.py" />
         <option value="$PROJECT_DIR$/src/restaurants/templates/restaurants/form.html" />
-        <option value="$PROJECT_DIR$/src/restaurants/views.py" />
+        <option value="$PROJECT_DIR$/src/restaurants/validators.py" />
+        <option value="$PROJECT_DIR$/src/restaurants/models.py" />
         <option value="$PROJECT_DIR$/src/restaurants/forms.py" />
+        <option value="$PROJECT_DIR$/src/muypicky/urls.py" />
+        <option value="$PROJECT_DIR$/src/restaurants/views.py" />
       </list>
     </option>
   </component>
@@ -367,7 +369,14 @@
       <option name="project" value="LOCAL" />
       <updated>1518799348919</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="moved to modelForms">
+      <created>1518874571575</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1518874571575</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -438,21 +447,14 @@
     <MESSAGE value="added slug generator and added it to the fields" />
     <MESSAGE value="added right slug regular expression" />
     <MESSAGE value="added django forms (not the right way yet)" />
-    <option name="LAST_COMMIT_MESSAGE" value="added django forms (not the right way yet)" />
+    <MESSAGE value="moved to modelForms" />
+    <option name="LAST_COMMIT_MESSAGE" value="moved to modelForms" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="77" lean-forward="false" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="77" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/restaurants/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -706,12 +708,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/restaurants/templates/restaurants/form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/restaurants/validators.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="61" lean-forward="false" selection-start-line="15" selection-start-column="61" selection-end-line="15" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/restaurants/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="77" lean-forward="false" selection-start-line="6" selection-start-column="3" selection-end-line="8" selection-end-column="77" />
+        <state relative-caret-position="180">
+          <caret line="10" column="20" lean-forward="false" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/restaurants/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -719,37 +747,19 @@
     <entry file="file://$PROJECT_DIR$/src/muypicky/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="558">
-          <caret line="31" column="60" lean-forward="false" selection-start-line="31" selection-start-column="60" selection-end-line="31" selection-end-column="60" />
+          <caret line="31" column="61" lean-forward="false" selection-start-line="31" selection-start-column="61" selection-end-line="31" selection-end-column="61" />
           <folding>
             <element signature="e#642#674#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/restaurants/templates/restaurants/form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/restaurants/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="767">
-          <caret line="43" column="33" lean-forward="true" selection-start-line="43" selection-start-column="33" selection-end-line="43" selection-end-column="33" />
+        <state relative-caret-position="677">
+          <caret line="43" column="29" lean-forward="false" selection-start-line="43" selection-start-column="29" selection-end-line="43" selection-end-column="29" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/restaurants/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="38" lean-forward="false" selection-start-line="1" selection-start-column="38" selection-end-line="1" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
           </folding>
         </state>
       </provider>
