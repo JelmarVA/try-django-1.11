@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block head_title %} {{ user.username }} || {{ block.super }} {% endblock head_title %}
+
+{% block content %}
+    <h1> {{ user.username }}</h1>
+    <form class="form" method="GET" action=".">
+    <input type="text" placeholder="search" name="q" value="{{ request.GET.q }}">
+    <button class="btn btn-default" type="submit">Search</button>
+    </form>
+    <hr/>
+
+    {% if user.item_set.all.exists %}
+
+        {% if locations %}
+
+            {% for rest in locations %}
+
+                {% if rest.item_set.all.exists %}
+
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="card card-default">
+                                <h4><b>{{ rest.title }}</b></h4>
+                                <p>{{ rest.location }} | {{ rest.category }}</p>
+                                <br/>
+                                <ul>
+                                    {% for item in rest.item_set.all %}
+
+                                        <li style="margin-bottom: 15px;">{{ item.name }} <br/>
+                                        
+                                        {% for ing in item.get_contents %}
+                                            <a href="{{ request.path }}?q={{ ing }}">{{ ing }}</a>
+                                        {% endfor %}
+                                        
+
+                                        </li>
+
+
+
+                                    {% endfor %}
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                {% endif %}
+
+            {% endfor %}
+
+        {% endif %}
+
+    {% else %}
+        <p class="lead">No items found</p>
+    {% endif %}
+
+{% endblock %}

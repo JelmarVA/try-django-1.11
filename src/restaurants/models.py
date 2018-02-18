@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models import Q
 from django.db.models.signals import pre_save, post_save
 from .validators import validate_category
 from django.conf import settings
@@ -7,6 +8,25 @@ from  django.core.urlresolvers import  reverse
 # Create your models here.
 
 User = settings.AUTH_USER_MODEL
+
+class RestaurantLocationQuerySet(models.QuerySet):
+    def search(self, query):
+        if query:
+            return self.filter(Q(name__icontains=query) |
+                           Q(location__icontains=query)|
+                           Q(category__icontains = query) |
+                           Q(item__name__icontains=query) |
+                           Q(item__contents__icontains=query)
+                           ).distinct()
+        else:
+            return self
+
+class RestaurantLocationManager(models.Manager):
+    def get_queryset(self):
+        return RestaurantLocationQuerySet(self.model, using=self._db)
+
+    def search(self, query):
+        return self.get_queryset().search(query)
 
 class RestaurantLocation(models.Model):
     owner           = models.ForeignKey(User)
@@ -17,6 +37,9 @@ class RestaurantLocation(models.Model):
     updated         = models.DateTimeField(auto_now=True)
     slug            = models.SlugField(blank=True, null=True)
     #my_date_field   = models.DateField(auto_now=False, auto_now_add=False)
+
+    objects = RestaurantLocationManager()
+
     def __str__(self):
         return self.name
 
